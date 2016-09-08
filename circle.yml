@@ -1,7 +1,8 @@
 machine:
-  pre:
-    - docker info
-    - docker pull hello-world
+  services:
+    - docker
 test:
   override:
+    - docker info
+    - docker pull hello-world
     - docker run hello-world
