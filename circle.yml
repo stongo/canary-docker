@@ -1,0 +1,7 @@
+machine:
+  pre:
+    - docker info
+    - docker pull hello-world
+test:
+  override:
+    - docker run hello-world
